@@ -35,7 +35,7 @@ RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2
     unzip awscliv2.zip && \
     ./aws/install
 
-RUN pip install oci-cli
+RUN pip install --no-cache-dir oci-cli==3.28.2
 
 COPY README.md /
 COPY entrypoint.sh /entrypoint.sh
